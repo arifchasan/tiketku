@@ -1,0 +1,427 @@
+INFO - 2024-03-05 00:15:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 13:58:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 13:58:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:01:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:01:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:01:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:02:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:02:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:02:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:02:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:02:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:05:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:06:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-05 14:06:44 --> ErrorException: Undefined index: id
+in APPPATH/Controllers/Auth.php on line 132.
+ 1 APPPATH/Controllers/Auth.php(132): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: id', '/Applications/AMPPS/www/tiket/app/Controllers/Auth.php', 132, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Auth->forgot_password_post()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-05 14:07:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:07:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:07:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:07:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:07:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:08:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:08:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:10:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:10:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:10:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-05 14:10:50 --> mysqli_sql_exception: Unknown column 'tb_user.id' in 'where clause' in /Applications/AMPPS/www/tiket/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /Applications/AMPPS/www/tiket/system/Database/MySQLi/Connection.php(306): mysqli->query('UPDATE `tb_user...', 0)
+#1 /Applications/AMPPS/www/tiket/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tb_user...')
+#2 /Applications/AMPPS/www/tiket/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tb_user...')
+#3 /Applications/AMPPS/www/tiket/system/Database/BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `tb_user...', Array, false)
+#4 /Applications/AMPPS/www/tiket/system/Model.php(393): CodeIgniter\Database\BaseBuilder->update()
+#5 /Applications/AMPPS/www/tiket/system/BaseModel.php(987): CodeIgniter\Model->doUpdate(Array, Array)
+#6 /Applications/AMPPS/www/tiket/system/Model.php(807): CodeIgniter\BaseModel->update(Array, Array)
+#7 /Applications/AMPPS/www/tiket/app/Controllers/Auth.php(137): CodeIgniter\Model->update('1', Array)
+#8 /Applications/AMPPS/www/tiket/system/CodeIgniter.php(941): App\Controllers\Auth->forgot_password_post()
+#9 /Applications/AMPPS/www/tiket/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#10 /Applications/AMPPS/www/tiket/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Applications/AMPPS/www/tiket/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-03-05 14:10:50 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tb_user.id' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `tb_user` SET `key_forgot` = :key_forgot:
+WHERE `tb_user`.`id` IN :tb_user.id:', [...], false)
+ 2 SYSTEMPATH/Model.php(393): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH/BaseModel.php(987): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH/Model.php(807): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH/Controllers/Auth.php(137): CodeIgniter\Model->update('1', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Auth->forgot_password_post()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-05 14:10:50 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tb_user.id' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 311.
+ 1 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tb_user` SET `key_forgot` = \'c9de76dcad7a9e2f05893d3b474da2fe9cbc5e6c\'
+WHERE `tb_user`.`id` IN (\'1\')')
+ 2 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tb_user` SET `key_forgot` = \'c9de76dcad7a9e2f05893d3b474da2fe9cbc5e6c\'
+WHERE `tb_user`.`id` IN (\'1\')')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `tb_user` SET `key_forgot` = :key_forgot:
+WHERE `tb_user`.`id` IN :tb_user.id:', [...], false)
+ 4 SYSTEMPATH/Model.php(393): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH/BaseModel.php(987): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH/Model.php(807): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH/Controllers/Auth.php(137): CodeIgniter\Model->update('1', [...])
+ 8 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Auth->forgot_password_post()
+ 9 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+10 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-05 14:10:50 --> [Caused by] mysqli_sql_exception: Unknown column 'tb_user.id' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 306.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(306): mysqli->query('UPDATE `tb_user` SET `key_forgot` = \'c9de76dcad7a9e2f05893d3b474da2fe9cbc5e6c\'
+WHERE `tb_user`.`id` IN (\'1\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tb_user` SET `key_forgot` = \'c9de76dcad7a9e2f05893d3b474da2fe9cbc5e6c\'
+WHERE `tb_user`.`id` IN (\'1\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tb_user` SET `key_forgot` = \'c9de76dcad7a9e2f05893d3b474da2fe9cbc5e6c\'
+WHERE `tb_user`.`id` IN (\'1\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `tb_user` SET `key_forgot` = :key_forgot:
+WHERE `tb_user`.`id` IN :tb_user.id:', [...], false)
+ 5 SYSTEMPATH/Model.php(393): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH/BaseModel.php(987): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH/Model.php(807): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH/Controllers/Auth.php(137): CodeIgniter\Model->update('1', [...])
+ 9 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Auth->forgot_password_post()
+10 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+11 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-05 14:11:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:11:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:12:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:12:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:12:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:12:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:18:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-05 14:18:10 --> ErrorException: Undefined variable: user
+in APPPATH/Views/dev/email-forgot-password.php on line 10.
+ 1 APPPATH/Views/dev/email-forgot-password.php(10): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: user', '/Applications/AMPPS/www/tiket/app/Views/dev/email-forgot-password.php', 10, [])
+ 2 SYSTEMPATH/View/View.php(228): include('/Applications/AMPPS/www/tiket/app/Views/dev/email-forgot-password.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render('dev/email-forgot-password', [], true)
+ 5 APPPATH/Controllers/Dev.php(19): view('dev/email-forgot-password')
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Dev->email('824ae2827e7e3099edff8c36fe131e3839a26d71')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dev))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-05 14:19:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-05 14:19:16 --> ErrorException: Undefined variable: key_forgot
+in APPPATH/Models/UserModel.php on line 29.
+ 1 APPPATH/Models/UserModel.php(29): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: key_forgot', '/Applications/AMPPS/www/tiket/app/Models/UserModel.php', 29, [...])
+ 2 APPPATH/Controllers/Dev.php(18): App\Models\UserModel->find_by_key('824ae2827e7e3099edff8c36fe131e3839a26d71')
+ 3 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Dev->email('824ae2827e7e3099edff8c36fe131e3839a26d71')
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dev))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-05 14:19:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:19:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:20:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:20:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:20:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:20:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-05 14:20:38 --> ErrorException: Undefined variable: key
+in APPPATH/Controllers/Auth.php on line 152.
+ 1 APPPATH/Controllers/Auth.php(152): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: key', '/Applications/AMPPS/www/tiket/app/Controllers/Auth.php', 152, [])
+ 2 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Auth->forgot_password_form('824ae2827e7e3099edff8c36fe131e3839a26d71')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-05 14:21:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-05 14:21:25 --> ErrorException: Undefined variable: key
+in APPPATH/Controllers/Auth.php on line 152.
+ 1 APPPATH/Controllers/Auth.php(152): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: key', '/Applications/AMPPS/www/tiket/app/Controllers/Auth.php', 152, [])
+ 2 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Auth->forgot_password_form('824ae2827e7e3099edff8c36fe131e3839a26d71')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-05 14:21:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:21:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-05 14:21:36 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH/Views/auth/forgot-password-form.php on line 83.
+ 1 APPPATH/Views/auth/forgot-password-form.php(83): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', '/Applications/AMPPS/www/tiket/app/Views/auth/forgot-password-form.php', 83, [...])
+ 2 SYSTEMPATH/View/View.php(228): include('/Applications/AMPPS/www/tiket/app/Views/auth/forgot-password-form.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render('auth/forgot-password-form', [], true)
+ 5 APPPATH/Controllers/Auth.php(158): view('auth/forgot-password-form', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Auth->forgot_password_form('images', 'logo.svg')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-05 14:21:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-05 14:21:36 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH/Views/auth/forgot-password-form.php on line 83.
+ 1 APPPATH/Views/auth/forgot-password-form.php(83): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', '/Applications/AMPPS/www/tiket/app/Views/auth/forgot-password-form.php', 83, [...])
+ 2 SYSTEMPATH/View/View.php(228): include('/Applications/AMPPS/www/tiket/app/Views/auth/forgot-password-form.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render('auth/forgot-password-form', [], true)
+ 5 APPPATH/Controllers/Auth.php(158): view('auth/forgot-password-form', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Auth->forgot_password_form('images', 'dark-logo.svg')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-05 14:21:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-05 14:21:36 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH/Views/auth/forgot-password-form.php on line 83.
+ 1 APPPATH/Views/auth/forgot-password-form.php(83): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', '/Applications/AMPPS/www/tiket/app/Views/auth/forgot-password-form.php', 83, [...])
+ 2 SYSTEMPATH/View/View.php(228): include('/Applications/AMPPS/www/tiket/app/Views/auth/forgot-password-form.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render('auth/forgot-password-form', [], true)
+ 5 APPPATH/Controllers/Auth.php(158): view('auth/forgot-password-form', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Auth->forgot_password_form('images', 'fav.jpeg')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-05 14:22:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:22:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-05 14:22:16 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH/Views/auth/forgot-password-form.php on line 83.
+ 1 APPPATH/Views/auth/forgot-password-form.php(83): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', '/Applications/AMPPS/www/tiket/app/Views/auth/forgot-password-form.php', 83, [...])
+ 2 SYSTEMPATH/View/View.php(228): include('/Applications/AMPPS/www/tiket/app/Views/auth/forgot-password-form.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render('auth/forgot-password-form', [], true)
+ 5 APPPATH/Controllers/Auth.php(158): view('auth/forgot-password-form', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Auth->forgot_password_form('images', 'dark-logo.svg')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-05 14:22:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-05 14:22:16 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH/Views/auth/forgot-password-form.php on line 83.
+ 1 APPPATH/Views/auth/forgot-password-form.php(83): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', '/Applications/AMPPS/www/tiket/app/Views/auth/forgot-password-form.php', 83, [...])
+ 2 SYSTEMPATH/View/View.php(228): include('/Applications/AMPPS/www/tiket/app/Views/auth/forgot-password-form.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render('auth/forgot-password-form', [], true)
+ 5 APPPATH/Controllers/Auth.php(158): view('auth/forgot-password-form', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Auth->forgot_password_form('images', 'logo.svg')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-05 14:22:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-05 14:22:16 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH/Views/auth/forgot-password-form.php on line 83.
+ 1 APPPATH/Views/auth/forgot-password-form.php(83): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', '/Applications/AMPPS/www/tiket/app/Views/auth/forgot-password-form.php', 83, [...])
+ 2 SYSTEMPATH/View/View.php(228): include('/Applications/AMPPS/www/tiket/app/Views/auth/forgot-password-form.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render('auth/forgot-password-form', [], true)
+ 5 APPPATH/Controllers/Auth.php(158): view('auth/forgot-password-form', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Auth->forgot_password_form('images', 'fav.jpeg')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-05 14:25:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:25:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-05 14:25:45 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH/Views/auth/forgot-password-form.php on line 83.
+ 1 APPPATH/Views/auth/forgot-password-form.php(83): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', '/Applications/AMPPS/www/tiket/app/Views/auth/forgot-password-form.php', 83, [...])
+ 2 SYSTEMPATH/View/View.php(228): include('/Applications/AMPPS/www/tiket/app/Views/auth/forgot-password-form.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render('auth/forgot-password-form', [], true)
+ 5 APPPATH/Controllers/Auth.php(158): view('auth/forgot-password-form', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Auth->forgot_password_form('images', 'logo.svg')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-05 14:25:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-05 14:25:45 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH/Views/auth/forgot-password-form.php on line 83.
+ 1 APPPATH/Views/auth/forgot-password-form.php(83): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', '/Applications/AMPPS/www/tiket/app/Views/auth/forgot-password-form.php', 83, [...])
+ 2 SYSTEMPATH/View/View.php(228): include('/Applications/AMPPS/www/tiket/app/Views/auth/forgot-password-form.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render('auth/forgot-password-form', [], true)
+ 5 APPPATH/Controllers/Auth.php(158): view('auth/forgot-password-form', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Auth->forgot_password_form('images', 'dark-logo.svg')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-05 14:25:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-05 14:25:45 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH/Views/auth/forgot-password-form.php on line 83.
+ 1 APPPATH/Views/auth/forgot-password-form.php(83): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', '/Applications/AMPPS/www/tiket/app/Views/auth/forgot-password-form.php', 83, [...])
+ 2 SYSTEMPATH/View/View.php(228): include('/Applications/AMPPS/www/tiket/app/Views/auth/forgot-password-form.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render('auth/forgot-password-form', [], true)
+ 5 APPPATH/Controllers/Auth.php(158): view('auth/forgot-password-form', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Auth->forgot_password_form('images', 'fav.jpeg')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-05 14:26:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:26:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-05 14:26:31 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH/Views/auth/forgot-password-form.php on line 83.
+ 1 APPPATH/Views/auth/forgot-password-form.php(83): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', '/Applications/AMPPS/www/tiket/app/Views/auth/forgot-password-form.php', 83, [...])
+ 2 SYSTEMPATH/View/View.php(228): include('/Applications/AMPPS/www/tiket/app/Views/auth/forgot-password-form.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render('auth/forgot-password-form', [], true)
+ 5 APPPATH/Controllers/Auth.php(158): view('auth/forgot-password-form', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Auth->forgot_password_form('images', 'logo.svg')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-05 14:26:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-05 14:26:31 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH/Views/auth/forgot-password-form.php on line 83.
+ 1 APPPATH/Views/auth/forgot-password-form.php(83): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', '/Applications/AMPPS/www/tiket/app/Views/auth/forgot-password-form.php', 83, [...])
+ 2 SYSTEMPATH/View/View.php(228): include('/Applications/AMPPS/www/tiket/app/Views/auth/forgot-password-form.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render('auth/forgot-password-form', [], true)
+ 5 APPPATH/Controllers/Auth.php(158): view('auth/forgot-password-form', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Auth->forgot_password_form('images', 'dark-logo.svg')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-05 14:26:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-05 14:26:31 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH/Views/auth/forgot-password-form.php on line 83.
+ 1 APPPATH/Views/auth/forgot-password-form.php(83): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', '/Applications/AMPPS/www/tiket/app/Views/auth/forgot-password-form.php', 83, [...])
+ 2 SYSTEMPATH/View/View.php(228): include('/Applications/AMPPS/www/tiket/app/Views/auth/forgot-password-form.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render('auth/forgot-password-form', [], true)
+ 5 APPPATH/Controllers/Auth.php(158): view('auth/forgot-password-form', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Auth->forgot_password_form('images', 'fav.jpeg')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-05 14:26:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-05 14:26:35 --> TypeError: Return value of App\Controllers\Auth::forgot_password_form_post() must be of the type string, object returned
+in APPPATH/Controllers/Auth.php on line 188.
+ 1 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Auth->forgot_password_form_post('824ae2827e7e3099edff8c36fe131e3839a26d71')
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-05 14:26:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-05 14:26:44 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH/Views/auth/forgot-password-form.php on line 83.
+ 1 APPPATH/Views/auth/forgot-password-form.php(83): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', '/Applications/AMPPS/www/tiket/app/Views/auth/forgot-password-form.php', 83, [...])
+ 2 SYSTEMPATH/View/View.php(228): include('/Applications/AMPPS/www/tiket/app/Views/auth/forgot-password-form.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render('auth/forgot-password-form', [], true)
+ 5 APPPATH/Controllers/Auth.php(158): view('auth/forgot-password-form', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Auth->forgot_password_form('824ae2827e7e3099edff8c36fe131e3839a26d71')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-05 14:26:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:27:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:27:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:27:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:27:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:27:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-05 14:27:13 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH/Views/auth/forgot-password-form.php on line 83.
+ 1 APPPATH/Views/auth/forgot-password-form.php(83): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', '/Applications/AMPPS/www/tiket/app/Views/auth/forgot-password-form.php', 83, [...])
+ 2 SYSTEMPATH/View/View.php(228): include('/Applications/AMPPS/www/tiket/app/Views/auth/forgot-password-form.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render('auth/forgot-password-form', [], true)
+ 5 APPPATH/Controllers/Auth.php(158): view('auth/forgot-password-form', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Auth->forgot_password_form('images', 'logo.svg')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-05 14:27:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-05 14:27:13 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH/Views/auth/forgot-password-form.php on line 83.
+ 1 APPPATH/Views/auth/forgot-password-form.php(83): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', '/Applications/AMPPS/www/tiket/app/Views/auth/forgot-password-form.php', 83, [...])
+ 2 SYSTEMPATH/View/View.php(228): include('/Applications/AMPPS/www/tiket/app/Views/auth/forgot-password-form.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render('auth/forgot-password-form', [], true)
+ 5 APPPATH/Controllers/Auth.php(158): view('auth/forgot-password-form', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Auth->forgot_password_form('images', 'dark-logo.svg')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-05 14:27:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-05 14:27:14 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH/Views/auth/forgot-password-form.php on line 83.
+ 1 APPPATH/Views/auth/forgot-password-form.php(83): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', '/Applications/AMPPS/www/tiket/app/Views/auth/forgot-password-form.php', 83, [...])
+ 2 SYSTEMPATH/View/View.php(228): include('/Applications/AMPPS/www/tiket/app/Views/auth/forgot-password-form.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render('auth/forgot-password-form', [], true)
+ 5 APPPATH/Controllers/Auth.php(158): view('auth/forgot-password-form', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Auth->forgot_password_form('images', 'fav.jpeg')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-05 14:27:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:27:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:27:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:30:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:30:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:30:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:30:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:30:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:30:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:30:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:31:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:31:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:31:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:32:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:32:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:32:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:32:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:32:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:32:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:32:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:32:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:32:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:32:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:32:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:33:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:33:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:33:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:33:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:33:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:33:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:33:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:33:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:33:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:33:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:33:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:33:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:34:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:34:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-05 14:34:03 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH/Views/auth/forgot-password-form.php on line 83.
+ 1 APPPATH/Views/auth/forgot-password-form.php(83): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', '/Applications/AMPPS/www/tiket/app/Views/auth/forgot-password-form.php', 83, [...])
+ 2 SYSTEMPATH/View/View.php(228): include('/Applications/AMPPS/www/tiket/app/Views/auth/forgot-password-form.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render('auth/forgot-password-form', [], true)
+ 5 APPPATH/Controllers/Auth.php(159): view('auth/forgot-password-form', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Auth->forgot_password_form('images', 'logo.svg')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-05 14:34:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-05 14:34:03 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH/Views/auth/forgot-password-form.php on line 83.
+ 1 APPPATH/Views/auth/forgot-password-form.php(83): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', '/Applications/AMPPS/www/tiket/app/Views/auth/forgot-password-form.php', 83, [...])
+ 2 SYSTEMPATH/View/View.php(228): include('/Applications/AMPPS/www/tiket/app/Views/auth/forgot-password-form.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render('auth/forgot-password-form', [], true)
+ 5 APPPATH/Controllers/Auth.php(159): view('auth/forgot-password-form', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Auth->forgot_password_form('images', 'dark-logo.svg')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-05 14:34:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-05 14:34:03 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH/Views/auth/forgot-password-form.php on line 83.
+ 1 APPPATH/Views/auth/forgot-password-form.php(83): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', '/Applications/AMPPS/www/tiket/app/Views/auth/forgot-password-form.php', 83, [...])
+ 2 SYSTEMPATH/View/View.php(228): include('/Applications/AMPPS/www/tiket/app/Views/auth/forgot-password-form.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render('auth/forgot-password-form', [], true)
+ 5 APPPATH/Controllers/Auth.php(159): view('auth/forgot-password-form', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Auth->forgot_password_form('images', 'fav.jpeg')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-05 14:34:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:34:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:34:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:34:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:34:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:34:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

@@ -1,0 +1,1150 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="h-100">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, shrink-to-fit=9">
+		<meta name="description" content="Gambolthemes">
+		<meta name="author" content="Gambolthemes">		
+		<title>TiketKu - Simple Online Event Ticketing System</title>
+		
+		<!-- Favicon Icon -->
+		<link rel="icon" type="image/png" href="images/fav.jpeg">
+		
+		<!-- Stylesheets -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+		<link href='vendor/unicons-2.0.1/css/unicons.css' rel='stylesheet'>
+		<link href="css/style.css" rel="stylesheet">
+		<link href="css/responsive.css" rel="stylesheet">
+		<link href="css/night-mode.css" rel="stylesheet">
+		
+		<!-- Vendor Stylesheets -->
+		<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+		<link href="vendor/OwlCarousel/assets/owl.carousel.css" rel="stylesheet">
+		<link href="vendor/OwlCarousel/assets/owl.theme.default.min.css" rel="stylesheet">
+		<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">		
+		
+	</head>
+
+<body class="d-flex flex-column h-100">
+	<!-- Header Start-->
+	<header class="header">
+		<div class="header-inner">
+			<nav class="navbar navbar-expand-lg bg-barren barren-head navbar fixed-top justify-content-sm-start pt-0 pb-0">
+				<div class="container">	
+					<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+						<span class="navbar-toggler-icon">
+							<i class="fa-solid fa-bars"></i>
+						</span>
+					</button>
+					<a class="navbar-brand order-1 order-lg-0 ml-lg-0 ml-2 me-auto" href="index.html">
+						<div class="res-main-logo">
+							<img src="images/logo-icon.svg" alt="">
+						</div>
+						<div class="main-logo" id="logo">
+							<a class="" style="font-size: 35px; font-weight: bold; color: green;" href="index.html">TiketKu</a>
+							<img class="logo-inverse" src="images/dark-logo.svg" alt="">
+						</div>
+					</a>
+					<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+						<div class="offcanvas-header">
+							<div class="offcanvas-logo" id="offcanvasNavbarLabel">
+								<img src="images/logo-icon.svg" alt="">
+							</div>
+							<button type="button" class="close-btn" data-bs-dismiss="offcanvas" aria-label="Close">
+								<i class="fa-solid fa-xmark"></i>
+							</button>
+						</div>
+						<div class="offcanvas-body">						
+							<ul class="navbar-nav justify-content-end flex-grow-1 pe_5">
+								<li class="nav-item">
+									<a class="nav-link active" aria-current="page" href="index.html">Home</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link active" aria-current="page" href="index.html">
+										About Us
+									</a>
+								</li>
+        <li class="nav-item">
+									<a class="nav-link active" aria-current="page" href="sign_in.html">
+										Sign Out
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="offcanvas-footer">
+							<div class="offcanvas-social">
+								<h5>Follow Us</h5>
+								<ul class="social-links">
+									<li><a href="index.html#" class="social-link"><i class="fab fa-facebook-square"></i></a>
+									<li><a href="index.html#" class="social-link"><i class="fab fa-instagram"></i></a>
+									<li><a href="index.html#" class="social-link"><i class="fab fa-twitter"></i></a>
+									<li><a href="index.html#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+									<li><a href="index.html#" class="social-link"><i class="fab fa-youtube"></i></a>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</nav>
+			<div class="overlay"></div>
+		</div>
+	</header>
+	<!-- Header End-->
+	<!-- Body Start-->
+	<div class="wrapper">
+		<div class="hero-banner">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-xl-8 col-lg-8 col-md-10">
+						<div class="hero-banner-content">
+							<h2>Discover Events For All The Things You Love</h2>
+							<div class="search-form main-form">
+								<div class="row g-3">
+									<div class="col-lg-5 col-md-12">
+										<div class="form-group search-category">
+											<select class="selectpicker" data-width="100%" data-size="5">
+												<option value="browse_all" data-icon="fa-solid fa-tower-broadcast" selected>Browse All</option>
+												<option value="venue_events" data-icon="fa-solid fa-location-dot">Venue Events</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-lg-5 col-md-12">
+										<div class="form-group">
+											<select class="selectpicker" data-width="100%" data-size="5" data-live-search="true">
+												<option value="01" selected>All</option>
+												<option value="02">Arts</option>
+												<option value="03">Business</option>
+												<option value="04">Coaching and Consulting</option>
+												<option value="05">Community and Culture</option>
+												<option value="06">Education and Training</option>
+												<option value="07">Family and Friends</option>
+												<option value="08">Fashion and Beauty</option>
+												<option value="09">Film and Entertainment</option>
+												<option value="10">Food and Drink</option>
+												<option value="11">Free</option>
+												<option value="12">Health and Wellbeing</option>
+												<option value="13">Hobbies and Interest</option>
+												<option value="14">Music and Theater</option>
+												<option value="15">Religion and Spirituality</option>
+												<option value="16">Science and Technology</option>
+												<option value="17">Sports and Fitness</option>
+												<option value="18">Travel and Outdoor</option>
+												<option value="19">Visual Arts</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-lg-2 col-md-12">
+										<a href="explore_events_by_date.html#" class="main-btn btn-hover w-100">Find</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="explore-events p-80">
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-12 col-lg-12 col-md-12">
+						<div class="main-title">
+							<h3 class="all event-box" style="display: block;">Semua Event</h3>
+							<h3 class="today event-box">Hari Ini</h3>
+							<h3 class="tomorrow event-box">Besok</h3>
+							<h3 class="thisWeek event-box">Minggu Ini</h3>
+							<h3 class="thisWeekend event-box">Akhir Pekan</h3>
+							<h3 class="nextWeekend event-box">Akhir Pekan Depan</h3>
+							<h3 class="thisMonth event-box">Bulan Ini</h3>
+							<h3 class="nextMonth event-box">Bulan Depan</h3>
+							<h3 class="thisYear event-box">Tahun Ini</h3>
+							<h3 class="nextYear event-box">Tahun depan</h3>
+						</div>
+						<div class="event-filter-items">
+							<div class="featured-controls">
+								<div class="filter-tag mb-3">
+									<label><input type="radio" name="colorRadio" value="all" checked=""><span>Semua</span></label>
+									<label><input type="radio" name="colorRadio" value="today"><span>Hari Ini <input type="text" name="" id=""></span></label>
+									<label><input type="radio" name="colorRadio" value="tomorrow"><span>Besok</span></label>
+									<label><input type="radio" name="colorRadio" value="thisWeek"><span>Minggu Ini</span></label>
+									<label><input type="radio" name="colorRadio" value="thisWeekend"><span>Akhir Pekan</span></label>
+									<label><input type="radio" name="colorRadio" value="nextWeekend"><span>Akhir Pekan Depan</span></label>
+									<label><input type="radio" name="colorRadio" value="thisMonth"><span>Bulan Ini</span></label>
+									<label><input type="radio" name="colorRadio" value="nextMonth"><span>Bulan Depan</span></label>
+									<label><input type="radio" name="colorRadio" value="thisYear"><span>Tahun Ini</span></label>
+									<label><input type="radio" name="colorRadio" value="nextYear"><span>Tahun depan</span></label>
+								</div>
+								<div class="all event-box" style="display: block;">
+									<div class="row">
+										<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mix arts  health_Wellness" data-ref="mixitup-target">
+           <div class="main-card mt-4">
+            <div class="event-thumbnail">
+             <a href="venue_event_detail_view.html" class="thumbnail-img">
+              <img src="images/event-imgs/artjogh.jpg" alt="">
+             </a>
+            </div>
+            <div class="event-content">
+             <a href="venue_event_detail_view.html" class="event-title">Sosialisasi Artjog Motif Ramalan</a>
+             <div class="duration-price-remaining">
+              <span class="duration-price">Rp. 200.000,00</span>
+              <span class="remaining"></span>
+             </div>
+            </div>
+            <div class="event-footer">
+             <div class="event-timing">
+              <div class="publish-date">
+               <span><i class="fa-solid fa-calendar-day me-2"></i>19 April</span>
+               <span class="dot"><i class="fa-solid fa-circle"></i></span>
+               <span>Jum, 15:45</span>
+              </div>
+              <span class="publish-time"><i class="fa-solid fa-clock me-2"></i>2h</span>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mix workshops" data-ref="mixitup-target">
+           <div class="main-card mt-4">
+            <div class="event-thumbnail">
+             <a href="online_event_detail_view.html" class="thumbnail-img">
+              <img src="images/event-imgs/debated.jpeg" alt="">
+             </a>
+            </div>
+            <div class="event-content">
+             <a href="online_event_detail_view.html" class="event-title">National University Debating Competition (NUDC)</a>
+             <div class="duration-price-remaining">
+              <span class="duration-price">Rp.300.000,00</span>
+              <span class="remaining"><i class="fa-solid fa-ticket fa-rotate-90"></i>Tersisa 6</span>
+             </div>
+            </div>
+            <div class="event-footer">
+             <div class="event-timing">
+              <div class="publish-date">
+               <span><i class="fa-solid fa-calendar-day me-2"></i>4 Mei</span>
+               <span class="dot"><i class="fa-solid fa-circle"></i></span>
+               <span>Jum, 14:00</span>
+              </div>
+              <span class="publish-time"><i class="fa-solid fa-clock me-2"></i>2h</span>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mix coaching_consulting free concert health_Wellness bussiness" data-ref="mixitup-target">
+           <div class="main-card mt-4">
+            <div class="event-thumbnail">
+             <a href="venue_event_detail_view.html" class="thumbnail-img">
+              <img src="images/event-imgs/img-3.jpg" alt="">
+             </a>
+            </div>
+            <div class="event-content">
+             <a href="venue_event_detail_view.html" class="event-title">Spring Showcase Saturday April 30th 2022 at 7pm</a>
+             <div class="duration-price-remaining">
+              <span class="duration-price">Rp. 750.000,00</span>
+              <span class="remaining"></span>
+             </div>
+            </div>
+            <div class="event-footer">
+             <div class="event-timing">
+              <div class="publish-date">
+               <span><i class="fa-solid fa-calendar-day me-2"></i>8 Mei</span>
+               <span class="dot"><i class="fa-solid fa-circle"></i></span>
+               <span>Kam, 20:00</span>
+              </div>
+              <span class="publish-time"><i class="fa-solid fa-rotate-90 me-2"></i>Tersisa 10</span>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class=" col-xl-3 col-lg-4 col-md-6 col-sm-12 mix workshops" data-ref="mixitup-target">
+           <div class="main-card mt-4">
+            <div class="event-thumbnail">
+             <a href="online_event_detail_view.html" class="thumbnail-img">
+              <img src="images/event-imgs/beauty.jpg" alt="">
+             </a>
+            </div>
+            <div class="event-content">
+             <a href="online_event_detail_view.html" class="event-title">Beauty Workshop</a>
+             <div class="duration-price-remaining">
+              <span class="duration-price">Rp. 300.000,00</span>
+             </div>
+            </div>
+            <div class="event-footer">
+             <div class="event-timing">
+              <div class="publish-date">
+               <span><i class="fa-solid fa-calendar-day me-2"></i>6 Mar</span>
+               <span class="dot"><i class="fa-solid fa-circle"></i></span>
+               <span>Rab, 13:00</span>
+              </div>
+              <span class="publish-time"><i class="fa-solid fa-clock me-2"></i>1h</span>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mix arts" data-ref="mixitup-target">
+           <div class="main-card mt-4">
+            <div class="event-thumbnail">
+             <a href="venue_event_detail_view.html" class="thumbnail-img">
+              <img src="images/event-imgs/sketsa.jpeg" alt="">
+             </a>
+            </div>
+            <div class="event-content">
+             <a href="venue_event_detail_view.html" class="event-title">PajangKarya KamiSketsa GalNas</a>
+             <div class="duration-price-remaining">
+              <span class="duration-price">Rp. 75.000,00</span>
+              <span class="remaining"></span>
+             </div>
+            </div>
+            <div class="event-footer">
+             <div class="event-timing">
+              <div class="publish-date">
+               <span><i class="fa-solid fa-calendar-day me-2"></i>13 April</span>
+               <span class="dot"><i class="fa-solid fa-circle"></i></span>
+               <span>Sab, 12:00</span>
+              </div>
+              <span class="publish-time"><i class="fa-solid fa-clock me-2"></i>5h</span>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mix arts" data-ref="mixitup-target">
+           <div class="main-card mt-4">
+            <div class="event-thumbnail">
+             <a href="venue_event_detail_view.html" class="thumbnail-img">
+              <img src="images/event-imgs/teater.jpeg" alt="">
+             </a>
+            </div>
+            <div class="event-content">
+             <a href="venue_event_detail_view.html" class="event-title">Pameran Seni Kontemporer Agus Suwage,</a>
+             <div class="duration-price-remaining">
+              <span class="duration-price">Rp. 150.000,00</span>
+              <span class="remaining"></span>
+             </div>
+            </div>
+            <div class="event-footer">
+             <div class="event-timing">
+              <div class="publish-date">
+               <span><i class="fa-solid fa-calendar-day me-2"></i>10 Mar</span>
+               <span class="dot"><i class="fa-solid fa-circle"></i></span>
+               <span>Min, 16:00</span>
+              </div>
+              <span class="publish-time"><i class="fa-solid fa-clock me-2"></i>1h</span>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mix free health_Wellness" data-ref="mixitup-target">
+           <div class="main-card mt-4">
+            <div class="event-thumbnail">
+             <a href="online_event_detail_view.html" class="thumbnail-img">
+              <img src="images/event-imgs/img-7.jpg" alt="">
+             </a>
+            </div>
+            <div class="event-content">
+             <a href="online_event_detail_view.html" class="event-title">Tutorial on Canvas Painting for Beginners</a>
+             <div class="duration-price-remaining">
+              <span class="duration-price">Rp. 100.000,00</span>
+              <span class="remaining"><i class="fa-solid fa-ticket fa-rotate-90"></i>Terisisa 17</span>
+             </div>
+            </div>
+            <div class="event-footer">
+             <div class="event-timing">
+              <div class="publish-date">
+               <span><i class="fa-solid fa-calendar-day me-2"></i>10 Mar</span>
+               <span class="dot"><i class="fa-solid fa-circle"></i></span>
+               <span>Min, 10:00</span>
+              </div>
+              <span class="publish-time"><i class="fa-solid fa-clock me-2"></i>1h</span>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mix arts" data-ref="mixitup-target">
+           <div class="main-card mt-4">
+            <div class="event-thumbnail">
+             <a href="venue_event_detail_view.html" class="thumbnail-img">
+              <img src="images/event-imgs/distrik.jpeg" alt="">
+             </a>
+            </div>
+            <div class="event-content">
+             <a href="venue_event_detail_view.html" class="event-title">Distrik Seni x Sarinah</a>
+             <div class="duration-price-remaining">
+              <span class="duration-price">Rp. 85.000,00</span>
+             </div>
+            </div>
+            <div class="event-footer">
+             <div class="event-timing">
+              <div class="publish-date">
+               <span><i class="fa-solid fa-calendar-day me-2"></i>2 Mar</span>
+               <span class="dot"><i class="fa-solid fa-circle"></i></span>
+               <span>Sab, 10:00</span>
+              </div>
+              <span class="publish-time"><i class="fa-solid fa-clock me-2"></i>12h</span>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mix sports" data-ref="mixitup-target">
+           <div class="main-card mt-4">
+            <div class="event-thumbnail">
+             <a href="venue_event_detail_view.html" class="thumbnail-img">
+              <img src="images/event-imgs/marathon.jpg" alt="">
+             </a>
+            </div>
+            <div class="event-content">
+             <a href="venue_event_detail_view.html" class="event-title">Jakarta City Run, event olahraga April 2024</a>
+             <div class="duration-price-remaining">
+              <span class="duration-price">Rp. 150.000,00</span>
+              <span class="remaining"></span>
+             </div>
+            </div>
+            <div class="event-footer">
+             <div class="event-timing">
+              <div class="publish-date">
+               <span><i class="fa-solid fa-calendar-day me-2"></i>21 Apr</span>
+               <span class="dot"><i class="fa-solid fa-circle"></i></span>
+               <span>Min, 07:30</span>
+              </div>
+              <span class="publish-time"><i class="fa-solid fa-clock me-2"></i>5h</span>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mix business volunteer" data-ref="mixitup-target">
+           <div class="main-card mt-4">
+            <div class="event-thumbnail">
+             <a href="online_event_detail_view.html" class="thumbnail-img">
+              <img src="images/event-imgs/unicef.jpg" alt="">
+             </a>
+             
+            </div>
+            <div class="event-content">
+             <a href="online_event_detail_view.html" class="event-title">Volunteers at UNICEF</a>
+             <div class="duration-price-remaining">
+              <span class="duration-price">Rp. 500.000,00</span>
+             </div>
+            </div>
+            <div class="event-footer">
+             <div class="event-timing">
+              <div class="publish-date">
+               <span><i class="fa-solid fa-calendar-day me-2"></i>30 Apr</span>
+               <span class="dot"><i class="fa-solid fa-circle"></i></span>
+               <span>Sab, 11:20</span>
+              </div>
+              <span class="publish-time"><i class="fa-solid fa-clock me-2"></i>2h</span>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mix concert" data-ref="mixitup-target">
+           <div class="main-card mt-4">
+            <div class="event-thumbnail">
+             <a href="venue_event_detail_view.html" class="thumbnail-img">
+              <img src="images/event-imgs/maliq.jpg" alt="">
+             </a>
+            </div>
+            <div class="event-content">
+             <a href="venue_event_detail_view.html" class="event-title">Maliq and The Essential - Bandung</a>
+             <div class="duration-price-remaining">
+              <span class="duration-price">Rp. 50.000,00</span>
+              <span class="remaining"></span>
+             </div>
+            </div>
+            <div class="event-footer">
+             <div class="event-timing">
+              <div class="publish-date">
+               <span><i class="fa-solid fa-calendar-day me-2"></i>4 Mei</span>
+               <span class="dot"><i class="fa-solid fa-circle"></i></span>
+               <span>Min, 20:00</span>
+              </div>
+              <span class="publish-time"><i class="fa-solid fa-clock me-2"></i>3h</span>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class=" col-xl-3 col-lg-4 col-md-6 col-sm-12 mix sports" data-ref="mixitup-target">
+           <div class="main-card mt-4">
+            <div class="event-thumbnail">
+             <a href="online_event_detail_view.html" class="thumbnail-img">
+              <img src="images/event-imgs/f1.jpeg" alt="">
+             </a>
+            </div>
+            <div class="event-content">
+             <a href="online_event_detail_view.html" class="event-title">F1 Powerboat</a>
+             <div class="duration-price-remaining">
+              <span class="duration-price">Rp. 200.000,00</span>
+              <span class="remaining"><i class="fa-solid fa-ticket fa-rotate-90"></i>Tersisa 7</span>
+             </div>
+            </div>
+            <div class="event-footer">
+             <div class="event-timing">
+              <div class="publish-date">
+               <span><i class="fa-solid fa-calendar-day me-2"></i>12 Mei</span>
+               <span class="dot"><i class="fa-solid fa-circle"></i></span>
+               <span>Min, 09:00</span>
+              </div>
+              <span class="publish-time"><i class="fa-solid fa-clock me-2"></i>1h</span>
+             </div>
+            </div>
+           </div>
+          </div>
+									</div>
+								</div>					
+								<div class="today event-box">
+									<div class="row">
+									</div>
+								</div>
+								<div class="tomorrow event-box">
+									<div class="row">								
+									</div>
+								</div>
+								<div class="thisWeek event-box">
+									<div class="row">
+          <div class=" col-xl-3 col-lg-4 col-md-6 col-sm-12 mix workshops" data-ref="mixitup-target">
+           <div class="main-card mt-4">
+            <div class="event-thumbnail">
+             <a href="online_event_detail_view.html" class="thumbnail-img">
+              <img src="images/event-imgs/beauty.jpg" alt="">
+             </a>
+            </div>
+            <div class="event-content">
+             <a href="online_event_detail_view.html" class="event-title">Beauty Workshop</a>
+             <div class="duration-price-remaining">
+              <span class="duration-price">Rp. 300.000,00</span>
+             </div>
+            </div>
+            <div class="event-footer">
+             <div class="event-timing">
+              <div class="publish-date">
+               <span><i class="fa-solid fa-calendar-day me-2"></i>6 Mar</span>
+               <span class="dot"><i class="fa-solid fa-circle"></i></span>
+               <span>Rab, 13:00</span>
+              </div>
+              <span class="publish-time"><i class="fa-solid fa-clock me-2"></i>1h</span>
+             </div>
+            </div>
+           </div>
+          </div>
+									</div>
+								</div>
+								<div class="thisWeekend event-box">
+									<div class="row">
+										<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mix arts" data-ref="mixitup-target">
+           <div class="main-card mt-4">
+            <div class="event-thumbnail">
+             <a href="venue_event_detail_view.html" class="thumbnail-img">
+              <img src="images/event-imgs/teater.jpeg" alt="">
+             </a>
+            </div>
+            <div class="event-content">
+             <a href="venue_event_detail_view.html" class="event-title">Pameran Seni Kontemporer Agus Suwage,</a>
+             <div class="duration-price-remaining">
+              <span class="duration-price">Rp. 150.000,00</span>
+              <span class="remaining"></span>
+             </div>
+            </div>
+            <div class="event-footer">
+             <div class="event-timing">
+              <div class="publish-date">
+               <span><i class="fa-solid fa-calendar-day me-2"></i>10 Mar</span>
+               <span class="dot"><i class="fa-solid fa-circle"></i></span>
+               <span>Min, 16:00</span>
+              </div>
+              <span class="publish-time"><i class="fa-solid fa-clock me-2"></i>1h</span>
+             </div>
+            </div>
+           </div>
+          </div>		
+									</div>
+								</div>
+								<div class="nextWeekend event-box">
+									<div class="row">
+									</div>
+								</div>
+								<div class="thisMonth event-box">
+									<div class="row">
+          <div class=" col-xl-3 col-lg-4 col-md-6 col-sm-12 mix workshops" data-ref="mixitup-target">
+           <div class="main-card mt-4">
+            <div class="event-thumbnail">
+             <a href="online_event_detail_view.html" class="thumbnail-img">
+              <img src="images/event-imgs/beauty.jpg" alt="">
+             </a>
+            </div>
+            <div class="event-content">
+             <a href="online_event_detail_view.html" class="event-title">Beauty Workshop</a>
+             <div class="duration-price-remaining">
+              <span class="duration-price">Rp. 300.000,00</span>
+             </div>
+            </div>
+            <div class="event-footer">
+             <div class="event-timing">
+              <div class="publish-date">
+               <span><i class="fa-solid fa-calendar-day me-2"></i>6 Mar</span>
+               <span class="dot"><i class="fa-solid fa-circle"></i></span>
+               <span>Rab, 13:00</span>
+              </div>
+              <span class="publish-time"><i class="fa-solid fa-clock me-2"></i>1h</span>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mix arts" data-ref="mixitup-target">
+           <div class="main-card mt-4">
+            <div class="event-thumbnail">
+             <a href="venue_event_detail_view.html" class="thumbnail-img">
+              <img src="images/event-imgs/teater.jpeg" alt="">
+             </a>
+            </div>
+            <div class="event-content">
+             <a href="venue_event_detail_view.html" class="event-title">Pameran Seni Kontemporer Agus Suwage,</a>
+             <div class="duration-price-remaining">
+              <span class="duration-price">Rp. 150.000,00</span>
+              <span class="remaining"></span>
+             </div>
+            </div>
+            <div class="event-footer">
+             <div class="event-timing">
+              <div class="publish-date">
+               <span><i class="fa-solid fa-calendar-day me-2"></i>10 Mar</span>
+               <span class="dot"><i class="fa-solid fa-circle"></i></span>
+               <span>Min, 16:00</span>
+              </div>
+              <span class="publish-time"><i class="fa-solid fa-clock me-2"></i>1h</span>
+             </div>
+            </div>
+           </div>
+          </div>
+										<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mix free health_Wellness" data-ref="mixitup-target">
+           <div class="main-card mt-4">
+            <div class="event-thumbnail">
+             <a href="online_event_detail_view.html" class="thumbnail-img">
+              <img src="images/event-imgs/img-7.jpg" alt="">
+             </a>
+            </div>
+            <div class="event-content">
+             <a href="online_event_detail_view.html" class="event-title">Tutorial on Canvas Painting for Beginners</a>
+             <div class="duration-price-remaining">
+              <span class="duration-price">Rp. 100.000,00</span>
+              <span class="remaining"><i class="fa-solid fa-ticket fa-rotate-90"></i>Terisisa 17</span>
+             </div>
+            </div>
+            <div class="event-footer">
+             <div class="event-timing">
+              <div class="publish-date">
+               <span><i class="fa-solid fa-calendar-day me-2"></i>10 Mar</span>
+               <span class="dot"><i class="fa-solid fa-circle"></i></span>
+               <span>Min, 10:00</span>
+              </div>
+              <span class="publish-time"><i class="fa-solid fa-clock me-2"></i>1h</span>
+             </div>
+            </div>
+           </div>
+          </div>
+									</div>
+								</div>
+								<div class="nextMonth event-box">
+									<div class="row">
+										<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mix arts  health_Wellness" data-ref="mixitup-target">
+           <div class="main-card mt-4">
+            <div class="event-thumbnail">
+             <a href="venue_event_detail_view.html" class="thumbnail-img">
+              <img src="images/event-imgs/artjogh.jpg" alt="">
+             </a>
+            </div>
+            <div class="event-content">
+             <a href="venue_event_detail_view.html" class="event-title">Sosialisasi Artjog Motif Ramalan</a>
+             <div class="duration-price-remaining">
+              <span class="duration-price">Rp. 200.000,00</span>
+              <span class="remaining"></span>
+             </div>
+            </div>
+            <div class="event-footer">
+             <div class="event-timing">
+              <div class="publish-date">
+               <span><i class="fa-solid fa-calendar-day me-2"></i>19 Apr</span>
+               <span class="dot"><i class="fa-solid fa-circle"></i></span>
+               <span>Jum, 15:45</span>
+              </div>
+              <span class="publish-time"><i class="fa-solid fa-clock me-2"></i>2h</span>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mix arts" data-ref="mixitup-target">
+           <div class="main-card mt-4">
+            <div class="event-thumbnail">
+             <a href="venue_event_detail_view.html" class="thumbnail-img">
+              <img src="images/event-imgs/sketsa.jpeg" alt="">
+             </a>
+            </div>
+            <div class="event-content">
+             <a href="venue_event_detail_view.html" class="event-title">PajangKarya KamiSketsa GalNas</a>
+             <div class="duration-price-remaining">
+              <span class="duration-price">Rp. 75.000,00</span>
+              <span class="remaining"></span>
+             </div>
+            </div>
+            <div class="event-footer">
+             <div class="event-timing">
+              <div class="publish-date">
+               <span><i class="fa-solid fa-calendar-day me-2"></i>13 April</span>
+               <span class="dot"><i class="fa-solid fa-circle"></i></span>
+               <span>Sab, 12:00</span>
+              </div>
+              <span class="publish-time"><i class="fa-solid fa-clock me-2"></i>5h</span>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mix sports" data-ref="mixitup-target">
+           <div class="main-card mt-4">
+            <div class="event-thumbnail">
+             <a href="venue_event_detail_view.html" class="thumbnail-img">
+              <img src="images/event-imgs/marathon.jpg" alt="">
+             </a>
+            </div>
+            <div class="event-content">
+             <a href="venue_event_detail_view.html" class="event-title">Jakarta City Run, event olahraga April 2024</a>
+             <div class="duration-price-remaining">
+              <span class="duration-price">Rp. 150.000,00</span>
+              <span class="remaining"></span>
+             </div>
+            </div>
+            <div class="event-footer">
+             <div class="event-timing">
+              <div class="publish-date">
+               <span><i class="fa-solid fa-calendar-day me-2"></i>21 Apr</span>
+               <span class="dot"><i class="fa-solid fa-circle"></i></span>
+               <span>Min, 07:30</span>
+              </div>
+              <span class="publish-time"><i class="fa-solid fa-clock me-2"></i>5h</span>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mix business volunteer" data-ref="mixitup-target">
+           <div class="main-card mt-4">
+            <div class="event-thumbnail">
+             <a href="online_event_detail_view.html" class="thumbnail-img">
+              <img src="images/event-imgs/unicef.jpg" alt="">
+             </a>
+             
+            </div>
+            <div class="event-content">
+             <a href="online_event_detail_view.html" class="event-title">Volunteers at UNICEF</a>
+             <div class="duration-price-remaining">
+              <span class="duration-price">Rp. 500.000,00</span>
+             </div>
+            </div>
+            <div class="event-footer">
+             <div class="event-timing">
+              <div class="publish-date">
+               <span><i class="fa-solid fa-calendar-day me-2"></i>30 Apr</span>
+               <span class="dot"><i class="fa-solid fa-circle"></i></span>
+               <span>Sab, 11:20</span>
+              </div>
+              <span class="publish-time"><i class="fa-solid fa-clock me-2"></i>2h</span>
+             </div>
+            </div>
+           </div>
+          </div>
+										</div>
+									</div>
+								</div>
+								<div class="thisYear event-box">
+									<div class="row">
+										<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mix arts  health_Wellness" data-ref="mixitup-target">
+           <div class="main-card mt-4">
+            <div class="event-thumbnail">
+             <a href="venue_event_detail_view.html" class="thumbnail-img">
+              <img src="images/event-imgs/artjogh.jpg" alt="">
+             </a>
+            </div>
+            <div class="event-content">
+             <a href="venue_event_detail_view.html" class="event-title">Sosialisasi Artjog Motif Ramalan</a>
+             <div class="duration-price-remaining">
+              <span class="duration-price">Rp. 200.000,00</span>
+              <span class="remaining"></span>
+             </div>
+            </div>
+            <div class="event-footer">
+             <div class="event-timing">
+              <div class="publish-date">
+               <span><i class="fa-solid fa-calendar-day me-2"></i>19 April</span>
+               <span class="dot"><i class="fa-solid fa-circle"></i></span>
+               <span>Jum, 15:45</span>
+              </div>
+              <span class="publish-time"><i class="fa-solid fa-clock me-2"></i>2h</span>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mix workshops" data-ref="mixitup-target">
+           <div class="main-card mt-4">
+            <div class="event-thumbnail">
+             <a href="online_event_detail_view.html" class="thumbnail-img">
+              <img src="images/event-imgs/debated.jpeg" alt="">
+             </a>
+            </div>
+            <div class="event-content">
+             <a href="online_event_detail_view.html" class="event-title">National University Debating Competition (NUDC)</a>
+             <div class="duration-price-remaining">
+              <span class="duration-price">Rp.300.000,00</span>
+              <span class="remaining"><i class="fa-solid fa-ticket fa-rotate-90"></i>Tersisa 6</span>
+             </div>
+            </div>
+            <div class="event-footer">
+             <div class="event-timing">
+              <div class="publish-date">
+               <span><i class="fa-solid fa-calendar-day me-2"></i>4 Mei</span>
+               <span class="dot"><i class="fa-solid fa-circle"></i></span>
+               <span>Jum, 14:00</span>
+              </div>
+              <span class="publish-time"><i class="fa-solid fa-clock me-2"></i>2h</span>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mix coaching_consulting free concert health_Wellness bussiness" data-ref="mixitup-target">
+           <div class="main-card mt-4">
+            <div class="event-thumbnail">
+             <a href="venue_event_detail_view.html" class="thumbnail-img">
+              <img src="images/event-imgs/img-3.jpg" alt="">
+             </a>
+            </div>
+            <div class="event-content">
+             <a href="venue_event_detail_view.html" class="event-title">Spring Showcase Saturday April 30th 2022 at 7pm</a>
+             <div class="duration-price-remaining">
+              <span class="duration-price">Rp. 750.000,00</span>
+              <span class="remaining"></span>
+             </div>
+            </div>
+            <div class="event-footer">
+             <div class="event-timing">
+              <div class="publish-date">
+               <span><i class="fa-solid fa-calendar-day me-2"></i>8 Mei</span>
+               <span class="dot"><i class="fa-solid fa-circle"></i></span>
+               <span>Kam, 20:00</span>
+              </div>
+              <span class="publish-time"><i class="fa-solid fa-rotate-90 me-2"></i>Tersisa 10</span>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class=" col-xl-3 col-lg-4 col-md-6 col-sm-12 mix workshops" data-ref="mixitup-target">
+           <div class="main-card mt-4">
+            <div class="event-thumbnail">
+             <a href="online_event_detail_view.html" class="thumbnail-img">
+              <img src="images/event-imgs/beauty.jpg" alt="">
+             </a>
+            </div>
+            <div class="event-content">
+             <a href="online_event_detail_view.html" class="event-title">Beauty Workshop</a>
+             <div class="duration-price-remaining">
+              <span class="duration-price">Rp. 300.000,00</span>
+             </div>
+            </div>
+            <div class="event-footer">
+             <div class="event-timing">
+              <div class="publish-date">
+               <span><i class="fa-solid fa-calendar-day me-2"></i>6 Mar</span>
+               <span class="dot"><i class="fa-solid fa-circle"></i></span>
+               <span>Rab, 13:00</span>
+              </div>
+              <span class="publish-time"><i class="fa-solid fa-clock me-2"></i>1h</span>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mix arts" data-ref="mixitup-target">
+           <div class="main-card mt-4">
+            <div class="event-thumbnail">
+             <a href="venue_event_detail_view.html" class="thumbnail-img">
+              <img src="images/event-imgs/sketsa.jpeg" alt="">
+             </a>
+            </div>
+            <div class="event-content">
+             <a href="venue_event_detail_view.html" class="event-title">PajangKarya KamiSketsa GalNas</a>
+             <div class="duration-price-remaining">
+              <span class="duration-price">Rp. 75.000,00</span>
+              <span class="remaining"></span>
+             </div>
+            </div>
+            <div class="event-footer">
+             <div class="event-timing">
+              <div class="publish-date">
+               <span><i class="fa-solid fa-calendar-day me-2"></i>13 April</span>
+               <span class="dot"><i class="fa-solid fa-circle"></i></span>
+               <span>Sab, 12:00</span>
+              </div>
+              <span class="publish-time"><i class="fa-solid fa-clock me-2"></i>5h</span>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mix arts" data-ref="mixitup-target">
+           <div class="main-card mt-4">
+            <div class="event-thumbnail">
+             <a href="venue_event_detail_view.html" class="thumbnail-img">
+              <img src="images/event-imgs/teater.jpeg" alt="">
+             </a>
+            </div>
+            <div class="event-content">
+             <a href="venue_event_detail_view.html" class="event-title">Pameran Seni Kontemporer Agus Suwage,</a>
+             <div class="duration-price-remaining">
+              <span class="duration-price">Rp. 150.000,00</span>
+              <span class="remaining"></span>
+             </div>
+            </div>
+            <div class="event-footer">
+             <div class="event-timing">
+              <div class="publish-date">
+               <span><i class="fa-solid fa-calendar-day me-2"></i>10 Mar</span>
+               <span class="dot"><i class="fa-solid fa-circle"></i></span>
+               <span>Min, 16:00</span>
+              </div>
+              <span class="publish-time"><i class="fa-solid fa-clock me-2"></i>1h</span>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mix free health_Wellness" data-ref="mixitup-target">
+           <div class="main-card mt-4">
+            <div class="event-thumbnail">
+             <a href="online_event_detail_view.html" class="thumbnail-img">
+              <img src="images/event-imgs/img-7.jpg" alt="">
+             </a>
+            </div>
+            <div class="event-content">
+             <a href="online_event_detail_view.html" class="event-title">Tutorial on Canvas Painting for Beginners</a>
+             <div class="duration-price-remaining">
+              <span class="duration-price">Rp. 100.000,00</span>
+              <span class="remaining"><i class="fa-solid fa-ticket fa-rotate-90"></i>Terisisa 17</span>
+             </div>
+            </div>
+            <div class="event-footer">
+             <div class="event-timing">
+              <div class="publish-date">
+               <span><i class="fa-solid fa-calendar-day me-2"></i>10 Mar</span>
+               <span class="dot"><i class="fa-solid fa-circle"></i></span>
+               <span>Min, 10:00</span>
+              </div>
+              <span class="publish-time"><i class="fa-solid fa-clock me-2"></i>1h</span>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mix arts" data-ref="mixitup-target">
+           <div class="main-card mt-4">
+            <div class="event-thumbnail">
+             <a href="venue_event_detail_view.html" class="thumbnail-img">
+              <img src="images/event-imgs/distrik.jpeg" alt="">
+             </a>
+            </div>
+            <div class="event-content">
+             <a href="venue_event_detail_view.html" class="event-title">Distrik Seni x Sarinah</a>
+             <div class="duration-price-remaining">
+              <span class="duration-price">Rp. 85.000,00</span>
+             </div>
+            </div>
+            <div class="event-footer">
+             <div class="event-timing">
+              <div class="publish-date">
+               <span><i class="fa-solid fa-calendar-day me-2"></i>2 Mar</span>
+               <span class="dot"><i class="fa-solid fa-circle"></i></span>
+               <span>Sab, 10:00</span>
+              </div>
+              <span class="publish-time"><i class="fa-solid fa-clock me-2"></i>12h</span>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mix sports" data-ref="mixitup-target">
+           <div class="main-card mt-4">
+            <div class="event-thumbnail">
+             <a href="venue_event_detail_view.html" class="thumbnail-img">
+              <img src="images/event-imgs/marathon.jpg" alt="">
+             </a>
+            </div>
+            <div class="event-content">
+             <a href="venue_event_detail_view.html" class="event-title">Jakarta City Run, event olahraga April 2024</a>
+             <div class="duration-price-remaining">
+              <span class="duration-price">Rp. 150.000,00</span>
+              <span class="remaining"></span>
+             </div>
+            </div>
+            <div class="event-footer">
+             <div class="event-timing">
+              <div class="publish-date">
+               <span><i class="fa-solid fa-calendar-day me-2"></i>21 Apr</span>
+               <span class="dot"><i class="fa-solid fa-circle"></i></span>
+               <span>Min, 07:30</span>
+              </div>
+              <span class="publish-time"><i class="fa-solid fa-clock me-2"></i>5h</span>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mix business volunteer" data-ref="mixitup-target">
+           <div class="main-card mt-4">
+            <div class="event-thumbnail">
+             <a href="online_event_detail_view.html" class="thumbnail-img">
+              <img src="images/event-imgs/unicef.jpg" alt="">
+             </a>
+             
+            </div>
+            <div class="event-content">
+             <a href="online_event_detail_view.html" class="event-title">Volunteers at UNICEF</a>
+             <div class="duration-price-remaining">
+              <span class="duration-price">Rp. 500.000,00</span>
+             </div>
+            </div>
+            <div class="event-footer">
+             <div class="event-timing">
+              <div class="publish-date">
+               <span><i class="fa-solid fa-calendar-day me-2"></i>30 Apr</span>
+               <span class="dot"><i class="fa-solid fa-circle"></i></span>
+               <span>Sab, 11:20</span>
+              </div>
+              <span class="publish-time"><i class="fa-solid fa-clock me-2"></i>2h</span>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mix concert" data-ref="mixitup-target">
+           <div class="main-card mt-4">
+            <div class="event-thumbnail">
+             <a href="venue_event_detail_view.html" class="thumbnail-img">
+              <img src="images/event-imgs/maliq.jpg" alt="">
+             </a>
+            </div>
+            <div class="event-content">
+             <a href="venue_event_detail_view.html" class="event-title">Maliq and The Essential - Bandung</a>
+             <div class="duration-price-remaining">
+              <span class="duration-price">Rp. 50.000,00</span>
+              <span class="remaining"></span>
+             </div>
+            </div>
+            <div class="event-footer">
+             <div class="event-timing">
+              <div class="publish-date">
+               <span><i class="fa-solid fa-calendar-day me-2"></i>4 Mei</span>
+               <span class="dot"><i class="fa-solid fa-circle"></i></span>
+               <span>Min, 20:00</span>
+              </div>
+              <span class="publish-time"><i class="fa-solid fa-clock me-2"></i>3h</span>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class=" col-xl-3 col-lg-4 col-md-6 col-sm-12 mix sports" data-ref="mixitup-target">
+           <div class="main-card mt-4">
+            <div class="event-thumbnail">
+             <a href="online_event_detail_view.html" class="thumbnail-img">
+              <img src="images/event-imgs/f1.jpeg" alt="">
+             </a>
+            </div>
+            <div class="event-content">
+             <a href="online_event_detail_view.html" class="event-title">F1 Powerboat</a>
+             <div class="duration-price-remaining">
+              <span class="duration-price">Rp. 200.000,00</span>
+              <span class="remaining"><i class="fa-solid fa-ticket fa-rotate-90"></i>Tersisa 7</span>
+             </div>
+            </div>
+            <div class="event-footer">
+             <div class="event-timing">
+              <div class="publish-date">
+               <span><i class="fa-solid fa-calendar-day me-2"></i>12 Mei</span>
+               <span class="dot"><i class="fa-solid fa-circle"></i></span>
+               <span>Min, 09:00</span>
+              </div>
+              <span class="publish-time"><i class="fa-solid fa-clock me-2"></i>1h</span>
+             </div>
+            </div>
+           </div>
+          </div>
+									</div>
+								</div>
+								<div class="nextYear event-box">
+									<div class="row">
+									</div>
+								</div>
+								<div class="browse-btn">
+									<a href="explore_events_by_date.html#" class="main-btn btn-hover ">No More Event</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Body End-->
+	<!-- Footer Start-->
+	<footer class="footer mt-auto">
+		<div class="footer-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-6">
+						<div class="footer-content">
+							<h4>Company</h4>
+							<ul class="footer-link-list">
+								<li><a href="about_us.html" class="footer-link">About Us</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<div class="footer-content">
+							<h4>Useful Links</h4>
+							<ul class="footer-link-list">
+								<li><a href="sell_tickets_online.html" class="footer-link">Sell Tickets Online</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<div class="footer-content">
+							<h4>Resources</h4>
+							<ul class="footer-link-list">
+								<li><a href="our_blog.html" class="footer-link">Blog</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<div class="footer-content">
+							<h4>Follow Us</h4>
+							<ul class="social-links">
+								<li><a href="explore_events_by_date.html#" class="social-link"><i class="fab fa-facebook-square"></i></a>
+								<li><a href="explore_events_by_date.html#" class="social-link"><i class="fab fa-instagram"></i></a>
+								<li><a href="explore_events_by_date.html#" class="social-link"><i class="fab fa-twitter"></i></a>
+								<li><a href="explore_events_by_date.html#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="footer-copyright-text">
+							<p class="mb-0">© 2024, <strong>TiketKu</strong>. All rights reserved. Created by Kelompok 2</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- Footer End-->
+	
+	
+	<script src="js/jquery.min.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="vendor/OwlCarousel/owl.carousel.js"></script>
+	<script src="vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>	
+	<script src="js/custom.js"></script>
+	<script src="js/night-mode.js"></script>
+	
+</body>
+</html>
