@@ -17,6 +17,7 @@
 		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 		<link href='<?= base_url('template'); ?>/vendor/unicons-2.0.1/css/unicons.css' rel='stylesheet'>
 		<link href="<?= base_url('template'); ?>/css/style.css" rel="stylesheet">
+		<link href="<?= base_url('template'); ?>/css/vertical-responsive-menu.min.css" rel="stylesheet">
 		<link href="<?= base_url('template'); ?>/css/responsive.css" rel="stylesheet">
 		<link href="<?= base_url('template'); ?>/css/night-mode.css" rel="stylesheet">
 		
@@ -25,7 +26,10 @@
 		<link href="<?= base_url('template'); ?>/vendor/OwlCarousel/assets/owl.carousel.css" rel="stylesheet">
 		<link href="<?= base_url('template'); ?>/vendor/OwlCarousel/assets/owl.theme.default.min.css" rel="stylesheet">
 		<link href="<?= base_url('template'); ?>/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-		<link href="<?= base_url('template'); ?>/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">		
+		<link href="<?= base_url('template'); ?>/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">	
+
+		<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+
 		
 	</head>
 
@@ -101,6 +105,49 @@
 	</header>
 	<!-- Header End-->
 
+	<!-- Left Sidebar Start -->
+	
+	<nav class="vertical_nav">
+		<div class="left_section menu_left" id="js-menu">
+			<div class="left_section">
+				<ul>
+					<li class="menu--item">
+						<a href="<?= base_url('dashboard/eo') ?>" class="menu--link" title="Dashboard" data-bs-toggle="tooltip" data-bs-placement="right">
+							<i class="fa-solid fa-gauge menu--icon"></i>
+							<span class="menu--label">Dashboard</span>
+						</a>
+					</li>
+					<li class="menu--item">
+						<a href="<?= base_url('dashboard/eo/event') ?>" class="menu--link" title="Events" data-bs-toggle="tooltip" data-bs-placement="right">
+							<i class="fa-solid fa-calendar-days menu--icon"></i>
+							<span class="menu--label">Events</span>
+						</a>
+					</li>
+					<li class="menu--item">
+						<a href="<?= base_url('dashboard/eo/report') ?>" class="menu--link" title="Reports" data-bs-toggle="tooltip" data-bs-placement="right">
+							<i class="fa-solid fa-chart-pie menu--icon"></i>
+							<span class="menu--label">Reports</span>
+						</a>
+					</li>
+					<li class="menu--item">
+						<a href="<?= base_url('dashboard/eo/profile') ?>" class="menu--link" title="Profil" data-bs-toggle="tooltip" data-bs-placement="right">
+							<i class="fa-solid fa-user menu--icon"></i>
+							<span class="menu--label">Profil</span>
+						</a>
+					</li>
+					<li class="menu--item">
+						<a href="<?= base_url('logout') ?>" class="menu--link" title="Logout" data-bs-toggle="tooltip" data-bs-placement="right">
+							<i class="fa-solid fa-power-off menu--icon"></i>
+							<span class="menu--label">Logout</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Left Sidebar End -->
+
 	<?= $this->renderSection('content') ?>
 		
 	<!-- Footer Start-->
@@ -159,6 +206,23 @@
 		</div>
 	</footer>
 	<!-- Footer End-->
+
+	<!-- Modal Alert Delete-->
+	<div class="modal fade" id="modal-alert" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	    <div class="modal-dialog" role="document">
+	        <div class="modal-content">
+	            <div class="modal-header">
+	                <h5 class="modal-title" id="mySmallModalLabel">Alert</h5>
+	            </div>
+	            <div class="modal-body p-4">
+	                <p>Yakin ingin HAPUS data ini?</p>
+	            </div>
+	            <div class="modal-footer">
+	                <a id="confirm" href="javascript:;" class="btn btn-danger">Hapus sekarang</a>
+	            </div>
+	        </div>
+	    </div>
+	</div>
 	
 	
 	<script src="<?= base_url('template'); ?>/js/jquery.min.js"></script>
@@ -168,6 +232,7 @@
 	<script src="<?= base_url('template'); ?>/vendor/mixitup/dist/mixitup.min.js"></script>
 	<script src="<?= base_url('template'); ?>/js/custom.js"></script>
 	<script src="<?= base_url('template'); ?>/js/night-mode.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>	
 	<script>	
 		var containerEl = document.querySelector('[data-ref~="event-filter-content"]');
 
@@ -176,6 +241,19 @@
                     target: '[data-ref~="mixitup-target"]'
                 }
             });
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('#summernote').summernote({
+				 height: 230
+			});
+		})
+
+		function alert_delete(url)
+	    {
+	        $("#confirm").attr('href', url);
+	        $("#modal-alert").modal('show');
+	    }
 	</script>
 </body>
 </html>
