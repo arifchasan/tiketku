@@ -54,7 +54,7 @@ function increaseCount(a, b) {
 function decreaseCount(a, b) {
   var input = b.nextElementSibling;
   var value = parseInt(input.value, 10);
-  if (value > 1) {
+  if (value > 0) {
     value = isNaN(value) ? 0 : value;
     value--;
     input.value = value;
@@ -578,7 +578,9 @@ $('.role-slider').owlCarousel({
 /*--- Count Time JS ---*/ 
 
 function makeTimer() {
-var endTime = new Date("december  30, 2022 17:00:00 PDT");			
+	// alert($("#endTime").val())
+var endTime = new Date($("#endTime").val());			
+// console.log(endTime)
 var endTime = (Date.parse(endTime)) / 1000;
 var now = new Date();
 var now = (Date.parse(now) / 1000);
@@ -590,10 +592,11 @@ var seconds = Math.floor((timeLeft - (days * 86400) - (hours * 3600) - (minutes 
 if (hours < "10") { hours = "0" + hours; }
 if (minutes < "10") { minutes = "0" + minutes; }
 if (seconds < "10") { seconds = "0" + seconds; }
-$("#days").html(days + "<span>Days</span>");
-$("#hours").html(hours + "<span>Hours</span>");
-$("#minutes").html(minutes + "<span>Minutes</span>");
-$("#seconds").html(seconds + "<span>Seconds</span>");
+console.log(hours)
+$("#days").html(days);
+$("#hours").html(hours);
+$("#minutes").html(minutes);
+$("#seconds").html(seconds);
 }
 setInterval(function() { makeTimer(); }, 300);
 

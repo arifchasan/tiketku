@@ -5,7 +5,13 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
+
 $routes->get('/', 'Home::index');
+$routes->get('/event/(:num)', 'Event::detail/$1');
+$routes->post('/event/(:num)', 'Event::detail_post/$1');
+$routes->get('/event/checkout/(:num)', 'Event::checkout/$1');
+
+//AUTH
 
 $routes->get('/sign-in', 'Auth::sign_in');
 $routes->post('/sign-in', 'Auth::sign_in_post');
@@ -43,6 +49,10 @@ $routes->group('dashboard', static function ($routes) {
     $routes->post('eo/event/tiket/(:num)/edit/(:num)', 'Dashboard\Eo::event_tiket_edit_post/$1/$2');
 
     $routes->get('eo/event/tiket/(:num)/delete/(:num)', 'Dashboard\Eo::event_tiket_delete/$1/$2');
+
+    $routes->get('pembeli', 'Dashboard\Pembeli::index');
+    $routes->get('pembeli/tiket', 'Dashboard\Pembeli::tiket');
+    $routes->get('pembeli/profile', 'Dashboard\Pembeli::profile');
 });
 
 //DEV
