@@ -21,6 +21,63 @@
 								</div>
 							</div>
 
+						<table class="table mt-4">
+							<tr>
+								<th>Event</th>
+								<th>Kode</th>
+								<th>Tanggal Pembelian</th>
+								<th>Total Harga</th>
+								<th>Status</th>
+							</tr>
+							<?php if(empty($lists)) { ?>
+								<tr>
+									<td colspan="4">
+										<p>Belum ada pemebelian</p>
+									</td>
+								</tr>
+							<?php } ?>
+
+							<?php foreach ($lists as $key => $v) : ?>
+								<tr>
+									<td><?= $v['nama'] ?></td>
+									<td><?= $v['kode'] ?></td>
+									<td><?= $v['tanggal_pembelian'] ?></td>
+									<td>Rp. <?= number_format($v['total_harga']) ?></td>
+									<td>
+										<?php 
+											switch ($v['status']) {
+												case 'pending':
+													$text = 'secondary';
+												break;
+												case 'sukses':
+													$text = 'success';
+												break;
+												case 'gagal':
+													$text = 'danger';
+												break;
+											}
+
+											if($v['status']=='pending')
+											{
+												$pay = '<a href="'.$v['link_pembayaran'].'">bayar</a>';
+											}
+											else if($v['status']=='sukses')
+											{
+												$pay = '<a href="'.base_url('dashboard/pembeli/tiket/'.$v['kode']).'">tiket</a>';
+											}
+											else
+											{
+												$pay = '';
+											}
+										?>
+										<div class="text-<?= $text ?>">
+											<?= $v['status'] ?> <?= $pay ?>
+										</div>
+									</td>
+								</tr>
+							<?php endforeach; ?>
+						</table>
+
 					</div>
 				</div>
 			</div>

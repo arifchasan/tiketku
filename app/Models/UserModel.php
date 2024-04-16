@@ -15,6 +15,7 @@ class UserModel extends Model
 
         return $this->where('email', strtolower($email))
         ->where('password', sha1($password))
+        ->where('status', 'active')
         ->first();
     }
 

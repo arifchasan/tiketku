@@ -52,7 +52,16 @@ $routes->group('dashboard', static function ($routes) {
 
     $routes->get('pembeli', 'Dashboard\Pembeli::index');
     $routes->get('pembeli/tiket', 'Dashboard\Pembeli::tiket');
+    $routes->get('pembeli/tiket/(:any)', 'Dashboard\Pembeli::tiket_invoice/$1');
     $routes->get('pembeli/profile', 'Dashboard\Pembeli::profile');
+
+    $routes->get('admin', 'Dashboard\Admin::index');
+    $routes->get('admin/event', 'Dashboard\Admin::event');
+    $routes->get('admin/setstatus/(:any)/(:num)', 'Dashboard\Admin::setstatus/$1/$2');
+    $routes->get('admin/delete/(:any)/(:num)', 'Dashboard\Admin::delete/$1/$2');
+    $routes->get('admin/user', 'Dashboard\Admin::user');
+    $routes->get('admin/setuser/(:any)/(:num)', 'Dashboard\Admin::setuser/$1/$2');
+    $routes->get('admin/profile', 'Dashboard\Admin::profile');
 });
 
 //DEV
