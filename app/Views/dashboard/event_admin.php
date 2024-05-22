@@ -18,8 +18,10 @@
 						<table class="table mt-4">
 							<tr>
 								<th>ID</th>
+								<th>Gambar</th>
 								<th>Nama</th>
 								<th>Lokasi</th>
+								<th>Deskripsi</th>
 								<th>Waktu</th>
 								<th>Status</th>
 								<th>#Aksi</th>
@@ -35,8 +37,10 @@
 							<?php foreach ($lists as $key => $v) : ?>
 								<tr>
 									<td><?= $v['event_id'] ?></td>
+									<td><img src="<?= base_url('uploads/'.$v['gambar']) ?>" height="50"></td>
 									<td><?= $v['nama'] ?></td>
 									<td><?= $v['lokasi'] ?></td>
+									<td><?= substr($v['deskripsi'], 0, 100) ?></td>
 									<td><?= $v['waktu'] ?></td>
 									<td><?= $v['status'] ?></td>
 									<td>
