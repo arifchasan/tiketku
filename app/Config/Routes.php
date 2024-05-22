@@ -33,6 +33,7 @@ $routes->group('dashboard', static function ($routes) {
     $routes->get('eo', 'Dashboard\Eo::index');
     $routes->get('eo/report', 'Dashboard\Eo::report');
     $routes->get('eo/profile', 'Dashboard\Eo::profile');
+    $routes->post('eo/profile', 'Dashboard\Eo::profile_post');
 
     $routes->get('eo/event', 'Dashboard\Eo::event');
     $routes->get('eo/event/add', 'Dashboard\Eo::event_add');
@@ -54,6 +55,7 @@ $routes->group('dashboard', static function ($routes) {
     $routes->get('pembeli/tiket', 'Dashboard\Pembeli::tiket');
     $routes->get('pembeli/tiket/(:any)', 'Dashboard\Pembeli::tiket_invoice/$1');
     $routes->get('pembeli/profile', 'Dashboard\Pembeli::profile');
+    $routes->post('pembeli/profile', 'Dashboard\Pembeli::profile_post');
 
     $routes->get('admin', 'Dashboard\Admin::index');
     $routes->get('admin/event', 'Dashboard\Admin::event');
@@ -62,6 +64,7 @@ $routes->group('dashboard', static function ($routes) {
     $routes->get('admin/user', 'Dashboard\Admin::user');
     $routes->get('admin/setuser/(:any)/(:num)', 'Dashboard\Admin::setuser/$1/$2');
     $routes->get('admin/profile', 'Dashboard\Admin::profile');
+    $routes->post('admin/profile', 'Dashboard\Admin::profile_post');
 });
 
 //DEV

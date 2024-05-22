@@ -38,7 +38,71 @@ class Eo extends BaseController
 
     public function profile()
     {
-    	return view('dashboard/profile');
+        $data = array(
+            'profile' => $this->user_model->find($this->session->get('user')['user_id'])
+        );
+
+        return view('dashboard/profile_eo', $data);
+    }
+
+    public function profile_post()
+    {
+        if (! $this->validate([
+            'nama' => [
+                'label'  => 'Nama',
+                'rules'  => 'required',
+            ],
+            'email' => [
+                'label'  => 'Email',
+                'rules'  => 'required|min_length[3]',
+            ],
+            'telp' => [
+                'label'  => 'Telp',
+                'rules'  => 'required|min_length[3]',
+            ],
+            'password_old' => [
+                'label'  => 'Password Lama',
+                'rules'  => 'permit_empty',
+            ],
+            'password_new' => [
+                'label'  => 'Password Baru',
+                'rules'  => 'permit_empty',
+            ],
+        ])) {
+            // The validation fails, so returns the form.
+            $this->session->setFlashdata('error', '<strong>Error!</strong>');
+            return $this->profile();
+        }
+
+        $post = $this->validator->getValidated();
+
+        $data = array(
+            'nama' => $post['nama'], 
+            'email' => $post['email'], 
+            'telp' => $post['telp'], 
+        );
+
+        $this->user_model->update($this->session->get('user')['user_id'], $data);
+
+        if(!empty($post['password_old']))
+        {
+            $profile = $this->user_model->find($this->session->get('user')['user_id']);
+
+            if(sha1($post['password_old']) != $profile['password'])
+            {
+                $this->session->setFlashdata('error', '<strong>Error! Password lama salah</strong>');
+                // echo 'sini';die;
+                return $this->profile();
+            }
+            else
+            {
+                $this->user_model->update($this->session->get('user')['user_id'], array('password' => sha1($post['password_new'])));
+            }
+        }
+
+        $this->session->setFlashdata('success', '<strong>Sukses Update data!</strong>');
+
+        return redirect()->to('/dashboard/eo/profile');
     }
 
     public function event()
