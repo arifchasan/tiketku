@@ -130,7 +130,7 @@ class Event extends BaseController
             "external_id" => '#TIKETKU-'.$code,
             "amount" => $amount,
             "description" => 'Pesanan Tiket #TIKETKU-'.$code,
-            "success_redirect_url"=> base_url('order/'.$code),
+            "success_redirect_url"=> base_url('dashboard/pembeli/tiket/'.$code),
         ) );
 
         curl_setopt( $ch, CURLOPT_POSTFIELDS, $payload );
@@ -168,7 +168,7 @@ class Event extends BaseController
         $_paymentDestination = $arrRequestInput['payment_destination'];
 
         $kode = explode('-', $_externalId);
-        $pembelian = $this->pembelian_model->data_by_kode($kode)->getResultArray();
+        $pembelian = $this->pembelian_model->data_by_kode($kode[1])->getResultArray();
         $pembelian = $pembelian[0];
 
         if($_status == 'PAID')
