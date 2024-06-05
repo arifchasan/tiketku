@@ -32,7 +32,26 @@ class Admin extends BaseController
 
     public function index()
     {
-    	return view('dashboard/admin');
+        $total_event = $this->event_model->dashboard_total_event_admin()->getResultArray();
+        $total_event = (count($total_event) > 0) ? $total_event[0]['total'] : 0;
+
+        $total_tiket = $this->pembelian_detail_model->dashboard_total_tiket_admin()->getResultArray();
+        $total_tiket = intval($total_tiket[0]['total']);
+
+        $total_pembelian = $this->pembelian_detail_model->dashboard_total_pembelian_admin()->getResultArray();
+        $total_pembelian = number_format($total_pembelian[0]['total']);
+
+        $total_pengguna = $this->user_model->dashboard_total_pengguna_admin()->getResultArray();
+        $total_pengguna = (count($total_pengguna) > 0) ? $total_pengguna[0]['total'] : 0;
+
+        $data = array(
+            'total_event' => $total_event, 
+            'total_tiket' => $total_tiket, 
+            'total_pembelian' => $total_pembelian, 
+            'total_pengguna' => $total_pengguna, 
+        );
+
+    	return view('dashboard/admin', $data);
     }
 
     public function profile()

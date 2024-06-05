@@ -15,5 +15,15 @@ class PembelianDetailModel extends Model
 
         return $this->where('pembelian_id', $pembelian_id)->where('jumlah > ', 0)->get();
     }
+
+    public function dashboard_total_tiket_admin()
+    {
+        return $this->select('sum(jumlah) as total')->get();
+    }
+
+    public function dashboard_total_pembelian_admin()
+    {
+        return $this->select('sum(total) as total')->get();
+    }
 }
 

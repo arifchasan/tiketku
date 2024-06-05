@@ -123,12 +123,12 @@
 							<span class="menu--label">Events</span>
 						</a>
 					</li>
-					<li class="menu--item">
+					<!-- <li class="menu--item">
 						<a href="<?= base_url('dashboard/eo/report') ?>" class="menu--link" title="Reports" data-bs-toggle="tooltip" data-bs-placement="right">
 							<i class="fa-solid fa-chart-pie menu--icon"></i>
 							<span class="menu--label">Reports</span>
 						</a>
-					</li>
+					</li> -->
 					<li class="menu--item">
 						<a href="<?= base_url('dashboard/eo/profile') ?>" class="menu--link" title="Profil" data-bs-toggle="tooltip" data-bs-placement="right">
 							<i class="fa-solid fa-user menu--icon"></i>

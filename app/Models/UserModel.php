@@ -30,5 +30,10 @@ class UserModel extends Model
         return $this->where('key_forgot', $key)
         ->first();
     }
+
+    public function dashboard_total_pengguna_admin()
+    {
+        return $this->select('count(*) as total')->get();
+    }
 }
 

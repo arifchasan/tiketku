@@ -6,6 +6,7 @@ use App\Controllers\BaseController;
 use App\Models\UserModel;
 use App\Models\EventModel;
 use App\Models\TiketModel;
+use App\Models\PembelianModel;
 
 class Eo extends BaseController
 {
@@ -24,11 +25,27 @@ class Eo extends BaseController
         $this->user_model = new UserModel();
         $this->event_model = new EventModel();
         $this->tiket_model = new TiketModel();
+        $this->pembelian_model = new PembelianModel();
     }
 
     public function index()
     {
-    	return view('dashboard/eo');
+        $total_event = $this->event_model->dashboard_total_event_eo($this->session->get('user')['user_id'])->getResultArray();
+        $total_event = (count($total_event) > 0) ? $total_event[0]['total'] : 0;
+
+        $total_tiket = $this->pembelian_model->dashboard_total_tiket_eo($this->session->get('user')['user_id'])->getResultArray();
+        $total_tiket = intval($total_tiket[0]['total']);
+
+        $total_pembelian = $this->pembelian_model->dashboard_total_pembelian_eo($this->session->get('user')['user_id'])->getResultArray();
+        $total_pembelian = number_format($total_pembelian[0]['total']);
+
+        $data = array(
+            'total_event' => $total_event, 
+            'total_tiket' => $total_tiket, 
+            'total_pembelian' => $total_pembelian, 
+        );
+
+    	return view('dashboard/eo', $data);
     }
 
     public function report()

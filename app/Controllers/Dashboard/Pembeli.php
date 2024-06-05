@@ -32,7 +32,22 @@ class Pembeli extends BaseController
 
     public function index()
     {
-    	return view('dashboard/pembeli');
+        $total_event = $this->pembelian_model->dashboard_total_event($this->session->get('user')['user_id'])->getResultArray();
+        $total_event = (count($total_event) > 0) ? $total_event[0]['total'] : 0;
+
+        $total_tiket = $this->pembelian_model->dashboard_total_tiket($this->session->get('user')['user_id'])->getResultArray();
+        $total_tiket = intval($total_tiket[0]['total']);
+
+        $total_pembelian = $this->pembelian_model->dashboard_total_pembelian($this->session->get('user')['user_id'])->getResultArray();
+        $total_pembelian = number_format($total_pembelian[0]['total']);
+
+        $data = array(
+            'total_event' => $total_event, 
+            'total_tiket' => $total_tiket, 
+            'total_pembelian' => $total_pembelian, 
+        );
+
+    	return view('dashboard/pembeli', $data);
     }
 
     public function profile()

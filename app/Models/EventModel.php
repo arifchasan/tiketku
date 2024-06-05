@@ -27,5 +27,15 @@ class EventModel extends Model
 
         return $this->select('MONTHNAME(waktu) as monthname, DAY(waktu) as datename, tb_event.*')->where('status', 'publish')->where('event_id', $id)->get();
     }
+
+    public function dashboard_total_event_eo($user_id)
+    {
+        return $this->select('count(*) as total')->where('user_id', $user_id)->get();
+    }
+
+    public function dashboard_total_event_admin()
+    {
+        return $this->select('count(*) as total')->get();
+    }
 }
 

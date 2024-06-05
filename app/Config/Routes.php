@@ -7,6 +7,7 @@ use CodeIgniter\Router\RouteCollection;
  */
 
 $routes->get('/', 'Home::index');
+$routes->get('/about', 'Home::about');
 $routes->get('/event/(:num)', 'Event::detail/$1');
 $routes->post('/event/(:num)', 'Event::detail_post/$1');
 $routes->get('/event/checkout/(:num)', 'Event::checkout/$1');

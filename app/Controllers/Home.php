@@ -28,4 +28,9 @@ class Home extends BaseController
 
         return view('index', $data);
     }
+
+    public function about(): string
+    {
+        return view('about');
+    }
 }

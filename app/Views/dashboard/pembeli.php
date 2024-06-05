@@ -17,7 +17,43 @@
 
 						<div class="tab-pane fade show active" id="all-tab" role="tabpanel">
 								<div class="main-card mt-4 p-4">
-									Dashboard Pembeli
+									
+										<div class="row">
+						                    <div class="col-xs-12 col-md-6 col-lg-6 col-xl-3">
+						                        <div class="card-box tilebox-one">
+						                            <i class="icon-layers float-right text-muted"></i>
+						                            <h6 class="text-muted text-uppercase m-b-20">Total Event</h6>
+						                            <h2 class="m-b-20" data-plugin="counterup"><?= $total_event ?></h2>
+						                        </div>
+						                    </div>
+
+						                    <div class="col-xs-12 col-md-6 col-lg-6 col-xl-3">
+						                        <div class="card-box tilebox-one">
+						                            <i class="icon-paypal float-right text-muted"></i>
+						                            <h6 class="text-muted text-uppercase m-b-20">Total Tiket Dibeli</h6>
+						                            <h2 class="m-b-20"><span data-plugin="counterup"><?= $total_tiket ?></span></h2>
+						                        </div>
+						                    </div>
+
+						                    <div class="col-xs-12 col-md-6 col-lg-6 col-xl-6">
+						                        <div class="card-box tilebox-one">
+						                            <i class="icon-chart float-right text-muted"></i>
+						                            <h6 class="text-muted text-uppercase m-b-20">Total Pembelian</h6>
+						                            <h2 class="m-b-20">Rp. <span data-plugin="counterup"><?= $total_pembelian ?></span></h2>
+						                        </div>
+						                    </div>
+
+						                    <!-- <div class="col-xs-12 col-md-6 col-lg-6 col-xl-3">
+						                        <div class="card-box tilebox-one">
+						                            <i class="icon-rocket float-right text-muted"></i>
+						                            <h6 class="text-muted text-uppercase m-b-20">Product Sold</h6>
+						                            <h2 class="m-b-20" data-plugin="counterup">1,890</h2>
+						                            <span class="label label-warning"> +89% </span> <span class="text-muted">Last year</span>
+						                        </div>
+						                    </div> -->
+						                </div>
+						                <!-- end row -->
+
 								</div>
 							</div>
 
