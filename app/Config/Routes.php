@@ -10,6 +10,7 @@ $routes->get('/', 'Home::index');
 $routes->get('/event/(:num)', 'Event::detail/$1');
 $routes->post('/event/(:num)', 'Event::detail_post/$1');
 $routes->get('/event/checkout/(:num)', 'Event::checkout/$1');
+$routes->post('/event/xendit_callback', 'Event::xendit_callback');
 
 //AUTH
 

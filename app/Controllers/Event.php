@@ -149,4 +149,40 @@ class Event extends BaseController
 
         return $url;
     }
+
+    //XENDIT CALLBACK
+    public function xendit_callback()
+    {
+        $rawRequestInput = file_get_contents("php://input");
+        // Baris ini melakukan format input mentah menjadi array asosiatif
+        $arrRequestInput = json_decode($rawRequestInput, true);
+        print_r($arrRequestInput);
+
+        $_id = $arrRequestInput['id'];
+        $_externalId = $arrRequestInput['external_id'];
+        $_userId = $arrRequestInput['user_id'];
+        $_status = $arrRequestInput['status'];
+        $_paidAmount = $arrRequestInput['paid_amount'];
+        $_paidAt = $arrRequestInput['paid_at'];
+        $_paymentChannel = $arrRequestInput['payment_channel'];
+        $_paymentDestination = $arrRequestInput['payment_destination'];
+
+        $kode = explode('-', $_externalId);
+        $pembelian = $this->pembelian_model->data_by_kode($kode)->getResultArray();
+        $pembelian = $pembelian[0];
+
+        if($_status == 'PAID')
+        {
+            $_status = 'sukses';
+        }
+        else
+        {
+            $_status = 'gagal';
+        }
+
+
+        $this->pembelian_model->update($pembelian['pembelian_id'], [
+            'status' => $_status
+        ]);
+    }
 }
