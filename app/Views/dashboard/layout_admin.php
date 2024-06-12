@@ -136,6 +136,12 @@
 						</a>
 					</li>
 					<li class="menu--item">
+						<a href="<?= base_url('dashboard/admin/about-us') ?>" class="menu--link" title="About Us" data-bs-toggle="tooltip" data-bs-placement="right">
+							<i class="fa-solid fa-list menu--icon"></i>
+							<span class="menu--label">About Us</span>
+						</a>
+					</li>
+					<li class="menu--item">
 						<a href="<?= base_url('logout') ?>" class="menu--link" title="Logout" data-bs-toggle="tooltip" data-bs-placement="right">
 							<i class="fa-solid fa-power-off menu--icon"></i>
 							<span class="menu--label">Logout</span>

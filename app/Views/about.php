@@ -31,7 +31,7 @@
 
 								<h4>Tentang Kami</h4>
 								
-								<p>Tiketku adalah platform yang memiliki Ticketing Management Service (TMS) teknologi unggul dalam mendukung seluruh penyelenggara event mulai dari distribusi &amp; manajemen tiket, hingga penyediaan laporan analisa event di akhir acara.</p>
+								<?= $data['konten'] ?>
 
 							</div>							
 						</div>

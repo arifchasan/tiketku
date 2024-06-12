@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Models\UserModel;
 use App\Models\EventModel;
 use App\Models\TiketModel;
+use App\Models\LamanModel;
 
 class Home extends BaseController
 {
@@ -16,6 +17,7 @@ class Home extends BaseController
         $this->user_model = new UserModel();
         $this->event_model = new EventModel();
         $this->tiket_model = new TiketModel();
+        $this->laman_model = new LamanModel();
     }
 
     public function index(): string
@@ -31,6 +33,10 @@ class Home extends BaseController
 
     public function about(): string
     {
-        return view('about');
+        $data = array(
+            'data' => $this->laman_model->find(1)
+        );
+
+        return view('about', $data);
     }
 }

@@ -67,6 +67,8 @@ $routes->group('dashboard', static function ($routes) {
     $routes->get('admin/setuser/(:any)/(:num)', 'Dashboard\Admin::setuser/$1/$2');
     $routes->get('admin/profile', 'Dashboard\Admin::profile');
     $routes->post('admin/profile', 'Dashboard\Admin::profile_post');
+    $routes->get('admin/about-us', 'Dashboard\Admin::about_us');
+    $routes->post('admin/about-us', 'Dashboard\Admin::about_us_post');
 });
 
 //DEV

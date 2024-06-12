@@ -8,6 +8,7 @@ use App\Models\EventModel;
 use App\Models\TiketModel;
 use App\Models\PembelianModel;
 use App\Models\PembelianDetailModel;
+use App\Models\LamanModel;
 
 class Admin extends BaseController
 {
@@ -28,6 +29,7 @@ class Admin extends BaseController
         $this->tiket_model = new TiketModel();
         $this->pembelian_model = new PembelianModel();
         $this->pembelian_detail_model = new PembelianDetailModel();
+        $this->laman_model = new LamanModel();
     }
 
     public function index()
@@ -61,6 +63,39 @@ class Admin extends BaseController
         );
 
     	return view('dashboard/profile_admin', $data);
+    }
+
+    public function about_us()
+    {
+        $data = array(
+            'data' => $this->laman_model->find(1)
+        );
+
+        return view('dashboard/about_us', $data);
+    }
+
+    public function about_us_post()
+    {
+        if (! $this->validate([
+            'konten' => [
+                'label'  => 'Konten',
+                'rules'  => 'required',
+            ],
+        ])) {
+            // The validation fails, so returns the form.
+            $this->session->setFlashdata('error', '<strong>Error!</strong>');
+            return $this->about_us();
+        }
+
+        $post = $this->validator->getValidated();
+
+        $data = array(
+            'konten' => $post['konten'],
+        );
+
+        $this->laman_model->update(1, $data);
+
+        return redirect()->to('/dashboard/admin/about-us');
     }
 
     public function profile_post()
