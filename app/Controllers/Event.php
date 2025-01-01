@@ -136,7 +136,7 @@ class Event extends BaseController
         curl_setopt( $ch, CURLOPT_POSTFIELDS, $payload );
         curl_setopt( $ch, CURLOPT_HTTPHEADER, array(
             'Content-Type: application/json',
-            'Authorization: Basic '.base64_encode('xnd_development_cBi71WgaiQh5CaheOkzK9YXebuv19R2GRezEJ236njYyr3QGGioYmVFC8cjAQ:')
+            'Authorization: Basic '.base64_encode('xnd_development_WVsNnc9KX1OGn9V9OJlSLwjDyPZlTE61Ke0NLNYCEPvjsnKxebarfrZmwZkAYD:')
         ));
         # Return response instead of printing.
         curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
