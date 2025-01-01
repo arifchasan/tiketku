@@ -164,8 +164,8 @@ class Event extends BaseController
         $_status = $arrRequestInput['status'];
         $_paidAmount = $arrRequestInput['paid_amount'];
         $_paidAt = $arrRequestInput['paid_at'];
-        $_paymentChannel = $arrRequestInput['payment_channel'];
-        $_paymentDestination = $arrRequestInput['payment_destination'];
+        // $_paymentChannel = $arrRequestInput['payment_channel'];
+        // $_paymentDestination = $arrRequestInput['payment_destination'];
 
         $kode = explode('-', $_externalId);
         $pembelian = $this->pembelian_model->data_by_kode($kode[1])->getResultArray();
